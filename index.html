@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3択クイズ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <!-- スタート画面 -->
+    <section id="start-screen" class="screen active">
+      <div class="emoji">🧠</div>
+      <h1>3択クイズ</h1>
+      <p class="lead">全5問。正しいと思う答えを選んでね！</p>
+      <button id="start-btn" class="primary-btn">スタート</button>
+    </section>
+
+    <!-- 問題画面 -->
+    <section id="quiz-screen" class="screen">
+      <div class="quiz-header">
+        <span id="progress-text">第1問 / 5</span>
+        <span id="score-text">得点: 0</span>
+      </div>
+      <div class="progress-bar"><div id="progress-fill"></div></div>
+      <h2 id="question"></h2>
+      <div id="choices" class="choices"></div>
+      <div id="feedback" class="feedback" aria-live="polite"></div>
+      <button id="next-btn" class="primary-btn hidden">次の問題へ</button>
+    </section>
+
+    <!-- 結果画面 -->
+    <section id="result-screen" class="screen">
+      <div id="result-emoji" class="emoji">🎉</div>
+      <h1>結果発表</h1>
+      <p class="result-score"><span id="final-score">0</span> / 5 問正解</p>
+      <p id="result-message" class="lead"></p>
+      <button id="retry-btn" class="primary-btn">もう一度挑戦する</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
